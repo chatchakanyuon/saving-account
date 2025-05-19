@@ -4,6 +4,7 @@ import {MatFormField, MatInput, MatLabel} from "@angular/material/input";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {AuthenticationControllerService} from '../../../services/services/authentication-controller.service';
 import {RegistrationRequest} from '../../../services/models/registration-request';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -22,7 +23,8 @@ export class RegistrationComponent {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthenticationControllerService
+    private authService: AuthenticationControllerService,
+    private router: Router
   ) {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -57,7 +59,7 @@ export class RegistrationComponent {
       }
     }).subscribe({
       next: (res) => {
-        console.log('Full response:', res);
+        this.router.navigate(['/auth/login'])
       },
       error: (err) => {
         console.log(JSON.stringify(this.errorMsg))

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MatAnchor, MatButton} from "@angular/material/button";
+import {MatButton} from "@angular/material/button";
 import {MatFormField, MatInput, MatLabel} from "@angular/material/input";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {Router} from '@angular/router';
@@ -12,7 +12,6 @@ import {Router} from '@angular/router';
     MatInput,
     MatLabel,
     ReactiveFormsModule,
-    MatAnchor
   ],
   templateUrl: './deposit.component.html',
   styleUrl: './deposit.component.scss'

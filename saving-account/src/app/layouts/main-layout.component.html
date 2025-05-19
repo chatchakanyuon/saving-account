@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <div class="nav-bar">
+    Saving Account
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Account</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

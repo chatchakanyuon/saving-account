@@ -23,11 +23,7 @@ export class TokenService {
     return payload?.stakeholders || [];
   }
 
-  isCustomer(): boolean {
-    return this.customerStakeholders.includes('CUSTOMER');
-  }
-
-  isTeller(): boolean {
-    return this.customerStakeholders.includes('TELLER');
+  clearToken() {
+    localStorage.clear()
   }
 }

@@ -11,13 +11,17 @@
 
   margin: -80px auto auto;
 
-  .paper {
-    padding: 1rem;
-  }
-
   h2 {
     text-align: center;
     margin-bottom: 24px;
+  }
+
+  a {
+    color: white;
+  }
+
+  .paper {
+    padding: 1rem;
   }
 
   .full-width {
@@ -25,8 +29,9 @@
     margin-bottom: 16px;
   }
 
-  button {
+  .button-group {
     display: flex;
-    justify-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
   }
 }

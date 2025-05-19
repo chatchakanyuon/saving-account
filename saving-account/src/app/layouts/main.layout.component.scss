@@ -1,5 +1,12 @@
 mat-toolbar {
   position: relative;
-  z-index: 1;
   height: 80px;
+  z-index: 1;
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
 }

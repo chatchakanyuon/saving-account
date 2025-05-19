@@ -32,7 +32,10 @@
         <input matInput type="password" formControlName="pin"/>
       </mat-form-field>
 
-      <button mat-flat-button (click)="register()" [disabled]="form.invalid">Confirm</button>
+      <div class="button-group">
+        <a href="/auth/login">Login</a>
+        <button mat-flat-button (click)="register()" [disabled]="form.invalid">Confirm</button>
+      </div>
     </form>
   </div>
 </div>

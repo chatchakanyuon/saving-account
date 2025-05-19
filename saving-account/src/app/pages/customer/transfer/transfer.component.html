@@ -13,7 +13,9 @@
         <input matInput formControlName="amount" type="number"/>
       </mat-form-field>
 
-      <button mat-stroked-button (click)="onVerify()">Verify</button>
+      <div class="button-group">
+        <button mat-flat-button (click)="onVerify()">Verify</button>
+      </div>
 
       <p class="arrow">John Doe 8888888 → Jane Does 7777777</p>
 

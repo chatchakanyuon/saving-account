@@ -47,14 +47,14 @@ export const routes: Routes = [
     component: AuthLayoutComponent,
     children: [
       {
-        path: 'registration',
+        path: 'auth/registration',
         component: RegistrationComponent
       },
       {
-        path: 'login',
+        path: 'auth/login',
         component: LoginComponent
       },
     ],
   },
-  {path: '**', redirectTo: 'login'}
+  {path: '**', redirectTo: 'auth/login'}
 ];
