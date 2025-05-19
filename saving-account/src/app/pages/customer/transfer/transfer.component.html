@@ -5,12 +5,12 @@
     <form [formGroup]="form">
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Transfer to account</mat-label>
-        <input matInput formControlName="toAccount" />
+        <input matInput formControlName="toAccount"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Amount</mat-label>
-        <input matInput formControlName="amount" type="number" />
+        <input matInput formControlName="amount" type="number"/>
       </mat-form-field>
 
       <button mat-stroked-button (click)="onVerify()">Verify</button>
@@ -19,10 +19,13 @@
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>PIN</mat-label>
-        <input matInput formControlName="pin" type="password" />
+        <input matInput formControlName="pin" type="password"/>
       </mat-form-field>
 
-      <button mat-stroked-button (click)="onConfirm()" [disabled]="form.invalid">Confirm</button>
+      <div class="button-group">
+        <button mat-stroked-button (click)="routeDashboard()">Back</button>
+        <button mat-flat-button (click)="onConfirm()" [disabled]="form.invalid">Confirm</button>
+      </div>
     </form>
   </div>
 </div>

@@ -17,25 +17,25 @@ export const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
-        path: 'customer-dashboard',
+        path: 'customer/dashboard',
         component: CustomerDashboardComponent,
         canActivate: [authGuard, stakeholderGuard],
         data: {stakeholders: ['CUSTOMER']}
       },
       {
-        path: 'teller-dashboard',
-        component: TellerDashboardComponent,
-        canActivate: [authGuard, stakeholderGuard],
-        data: {stakeholders: ['TELLER']}
-      },
-      {
-        path: 'transfer',
+        path: 'customer/transfer',
         component: TransferComponent,
         canActivate: [authGuard, stakeholderGuard],
         data: {stakeholders: ['CUSTOMER']}
       },
       {
-        path: 'deposit',
+        path: 'teller/dashboard',
+        component: TellerDashboardComponent,
+        canActivate: [authGuard, stakeholderGuard],
+        data: {stakeholders: ['TELLER']}
+      },
+      {
+        path: 'teller/deposit',
         component: DepositComponent,
         canActivate: [authGuard, stakeholderGuard],
         data: {stakeholders: ['TELLER']}

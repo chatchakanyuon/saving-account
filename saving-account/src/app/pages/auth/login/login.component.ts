@@ -3,8 +3,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {AuthenticationControllerService} from '../../services/services/authentication-controller.service';
-import {TokenService} from '../../services/token/token.service';
+import {AuthenticationControllerService} from '../../../services/services/authentication-controller.service';
+import {TokenService} from '../../../services/token/token.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -51,10 +51,10 @@ export class LoginComponent {
 
         switch (stakeholder) {
           case "CUSTOMER":
-            this.router.navigate(['/customer-dashboard'])
+            this.router.navigate(['/customer/dashboard'])
             break
           case "TELLER":
-            this.router.navigate(['/teller-customer-dashboard'])
+            this.router.navigate(['/teller/dashboard'])
             break
         }
       },

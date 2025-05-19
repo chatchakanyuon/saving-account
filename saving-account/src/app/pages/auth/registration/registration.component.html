@@ -4,35 +4,35 @@
     <form [formGroup]="form">
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
-        <input matInput type="email" formControlName="email" />
+        <input matInput type="email" formControlName="email"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="password" />
+        <input matInput type="password" formControlName="password"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>ID</mat-label>
-        <input matInput formControlName="cid" />
+        <input matInput formControlName="cid"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Thai Name</mat-label>
-        <input matInput formControlName="thaiName" />
+        <input matInput formControlName="thaiName"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>English Name</mat-label>
-        <input matInput formControlName="englishName" />
+        <input matInput formControlName="englishName"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>PIN</mat-label>
-        <input matInput type="password" formControlName="pin" />
+        <input matInput type="password" formControlName="pin"/>
       </mat-form-field>
 
-      <button mat-stroked-button (click)="register()" [disabled]="form.invalid">Confirm</button>
+      <button mat-flat-button (click)="register()" [disabled]="form.invalid">Confirm</button>
     </form>
   </div>
 </div>

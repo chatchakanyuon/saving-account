@@ -1,7 +1,7 @@
-export * from './login'
-export * from './registration'
-export * from './transfer'
-export * from './deposit'
-export * from './teller-dashboard'
-export * from './customer-dashboard'
+export * from './auth/login'
+export * from './auth/registration'
+export * from './customer/transfer'
+export * from './teller/deposit'
+export * from './teller/dashboard'
+export * from './customer/dashboard'
 

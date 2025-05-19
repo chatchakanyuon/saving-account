@@ -25,8 +25,12 @@
     text-align: center;
   }
 
-  button {
+  .button-group {
     display: flex;
-    justify-self: flex-end;
+    justify-content: flex-end;
+  }
+
+  button {
+    margin-left: 16px;
   }
 }

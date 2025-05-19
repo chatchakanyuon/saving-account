@@ -1,0 +1,36 @@
+.container {
+  color: white;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: inherit;
+  position: relative;
+  flex-direction: column;
+
+  margin: -80px auto auto;
+
+  .paper {
+    padding: 1rem;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  button {
+    margin-left: 16px;
+  }
+}

@@ -4,15 +4,18 @@
     <form [formGroup]="form">
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Account</mat-label>
-        <input matInput formControlName="account" />
+        <input matInput formControlName="account"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Amount</mat-label>
-        <input matInput type="number" formControlName="amount" />
+        <input matInput type="number" formControlName="amount"/>
       </mat-form-field>
 
-      <button mat-stroked-button (click)="confirmDeposit()" [disabled]="form.invalid">Confirm</button>
+      <div class="button-group">
+        <button mat-stroked-button (click)="routeDashboard()">Back</button>
+        <button mat-flat-button (click)="confirmDeposit()" [disabled]="form.invalid">Confirm</button>
+      </div>
     </form>
   </div>
 </div>

@@ -10,26 +10,23 @@ export const stakeholderGuard: CanActivateFn = (route, state) => {
   const token = tokenService.token;
   const requiredStakeholders = route.data?.['stakeholders'] as string[];
 
-  try {
-    const payload: any = jwtDecode(token);
-    const stakeholders: string[] = payload.stakeholders || [];
-    const hasRole = requiredStakeholders.some(stakeholder => stakeholder.includes(stakeholder));
+  const payload: any = jwtDecode(token);
+  const customerStakeholder: string = payload.stakeholders[0] || "";
 
-    if (hasRole) {
-      return true;
-    }
+  const hasRole = requiredStakeholders.some(stakeholder => stakeholder.includes(customerStakeholder));
 
-    router.navigate(['/auth/login'], {
-      queryParams: {returnUrl: state.url}
-    });
-
-    return false;
-  } catch (e) {
-    console.error('Invalid token', e);
-    router.navigate(['/auth/login'], {
-      queryParams: {returnUrl: state.url}
-    });
-
-    return false;
+  if (hasRole) {
+    return true;
   }
+
+  switch (customerStakeholder) {
+    case  'TELLER':
+      router.navigate(['/teller/dashboard'])
+      break
+    case  'CUSTOMER':
+      router.navigate(['/customer/dashboard'])
+      break
+  }
+
+  return false;
 };

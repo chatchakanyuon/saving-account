@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {MatFormField, MatInput, MatLabel} from "@angular/material/input";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {AuthenticationControllerService} from '../../services/services/authentication-controller.service';
-import {RegistrationRequest} from '../../services/models/registration-request';
+import {AuthenticationControllerService} from '../../../services/services/authentication-controller.service';
+import {RegistrationRequest} from '../../../services/models/registration-request';
 
 @Component({
   selector: 'app-registration',
-    imports: [
-        MatButton,
-        MatFormField,
-        MatInput,
-        MatLabel,
-        ReactiveFormsModule
-    ],
+  imports: [
+    MatButton,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    ReactiveFormsModule
+  ],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.scss'
 })
